@@ -136,13 +136,13 @@ Technically speaking, the HTTP protocol is not well-suited for communication fro
 
 ### Refactoring the backend
 
-Since version 3.0 Apollo Server has not provided support for subscriptions out of the box so we need to do some changes to get it set up. Let us also clean the app structure a bit.
+Since version 3.0 Apollo Server does not support subscriptions out of the box so we need to do some changes before we set up subscriptions. Let us also clean the app structure a bit.
 
 Let us start by extracting the schema definition to file
 <i>schema.js</i>
 
 ```js
-const { gql } = require('apollo-server')
+const { gql } = require('@apollo/server')
 
 const typeDefs = gql`
   type User {
@@ -198,7 +198,7 @@ module.exports = typeDefs
 The resolvers definition is moved to the file <i>resolvers.js</i>
 
 ```js
-const { UserInputError, AuthenticationError } = require('apollo-server')
+const { UserInputError, AuthenticationError } = require('@apollo/server')
 const jwt = require('jsonwebtoken')
 const Person = require('./models/person')
 const User = require('./models/user')
@@ -311,15 +311,18 @@ module.exports = resolvers
 Next we will replace Apollo Server with [Apollo Server Express](https://www.apollographql.com/docs/apollo-server/integrations/middleware/#apollo-server-express). Following libraries are installed
 
 ```
-npm install apollo-server-express apollo-server-core express @graphql-tools/schema
+npm install express cors body-parser @graphql-tools/schema
 ```
 and the file <i>index.js</i> changes to:
 
 ```js
-const { ApolloServer } = require('apollo-server-express')
-const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core')
+const { ApolloServer } = require('@apollo/server')
+const { expressMiddleware } = require('@apollo/server/express4')
+const { ApolloServerPluginDrainHttpServer } = require('@apollo/server/plugin/drainHttpServer')
 const { makeExecutableSchema } = require('@graphql-tools/schema')
 const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
 const http = require('http')
 
 const jwt = require('jsonwebtoken')
@@ -367,13 +370,26 @@ const start = async () => {
     },
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   })
+  
+  app.use(
+    '/',
+    cors(),
+    bodyParser.json(),
+    expressMiddleware(server, {
+      context: async ({ req }) => {
+        const auth = req ? req.headers.authorization : null
+        if (auth && auth.toLowerCase().startsWith('bearer ')) {
+          const decodedToken = jwt.verify(auth.substring(7), JWT_SECRET)
+          const currentUser = await User.findById(decodedToken.id).populate(
+            'friends'
+          )
+          return { currentUser }
+        }  
+      },
+    }),
+  );
 
   await server.start()
-
-  server.applyMiddleware({
-    app,
-    path: '/',
-  })
 
   const PORT = 4000
 
@@ -403,7 +419,7 @@ type Subscription {
 
 So when a new person is added, all of its details are sent to all subscribers.
 
-First, we have to install two packages for adding subscriptions to GraphQL:
+First, we have to install two packages for adding subscriptions to GraphQL and a Node.js WebSocket library:
 
 ```
 npm install graphql-subscriptions ws graphql-ws
@@ -483,7 +499,7 @@ start()
 
 When queries and mutations are used, GraphQL uses the HTTP protocol in the communication. In case of subscriptions, the communication between client and server happens with [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API).
 
-The below code registers a WebSocketServer object to listen the WebSocket connections, besides the usual HTTP connections that the server listens. The second part of the definition registers a function that closes the WebSocket connection on server shutdown.
+The above code registers a WebSocketServer object to listen the WebSocket connections, besides the usual HTTP connections that the server listens. The second part of the definition registers a function that closes the WebSocket connection on server shutdown.
 
 WebSockets are a perfect match for communication in the case of GraphQL subscriptions since when WebSockets are used, also the server can initiate the communication.
 
@@ -538,10 +554,10 @@ const resolvers = {
 
 
 
-With subscriptions, the communication happens using the [publish-subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) principle utilizing the object [PubSub](https://www.apollographql.com/docs/graphql-subscriptions/setup/#setup).
+With subscriptions, the communication happens using the [publish-subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) principle utilizing the object [PubSub](https://www.apollographql.com/docs/apollo-server/data/subscriptions/#the-pubsub-class).
 
 There is only few lines of code added, but quite much is happening under the hood. The resolver of the _personAdded_ subscription registers and saves info about all the clients that do the subscription. The clients are saved to an 
-["iterator object"](https://www.apollographql.com/docs/graphql-subscriptions/subscriptions-to-schema.html) called <i>PERSON\_ADDED</i>  thanks to the following code:
+["iterator object"](https://www.apollographql.com/docs/apollo-server/data/subscriptions/#listening-for-events) called <i>PERSON\_ADDED</i>  thanks to the following code:
 
 ```js
 Subscription: {
@@ -684,8 +700,8 @@ const App = () => {
   // ...
 
   useSubscription(PERSON_ADDED, {
-    onSubscriptionData: ({ subscriptionData }) => {
-      console.log(subscriptionData)
+    onData: ({ data }) => {
+      console.log(data)
     }
   })
 
@@ -699,7 +715,7 @@ When a new person is now added to the phonebook, no matter where it's done, the 
 ![](../../images/8/32e.png)
 
 
-When a new person is added, the server sends a notification to the client, and the callback function defined in the _onSubscriptionData_ attribute is called and given the details of the new person as parameters. 
+When a new person is added, the server sends a notification to the client, and the callback function defined in the _onData_ attribute is called and given the details of the new person as parameters. 
 
 Let's extend our solution so that when the details of a new person are received, the person is added to the Apollo cache, so it is rendered to the screen immediately. 
 
@@ -708,8 +724,8 @@ const App = () => {
   // ...
 
   useSubscription(PERSON_ADDED, {
-    onSubscriptionData: ({ subscriptionData }) => {
-      const addedPerson = subscriptionData.data.personAdded
+    onData: ({ data }) => {
+      const addedPerson = data.data.personAdded
       notify(`${addedPerson.name} added`)
 
       // highlight-start
@@ -760,8 +776,8 @@ const App = () => {
   const client = useApolloClient() 
 
   useSubscription(PERSON_ADDED, {
-    onSubscriptionData: ({ subscriptionData, client }) => {
-      const addedPerson = subscriptionData.data.personAdded
+    onData: ({ data, client }) => {
+      const addedPerson = data.data.personAdded
       notify(`${addedPerson.name} added`)
       updateCache(client.cache, { query: ALL_PERSONS }, addedPerson) // highlight-line
     },

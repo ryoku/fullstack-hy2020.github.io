@@ -797,7 +797,7 @@ notesRouter.delete('/:id', async (request, response, next) => {
   try {
     await Note.findByIdAndRemove(request.params.id)
     response.status(204).end()
-  } catch (exception) {
+  } catch(exception) {
     next(exception)
   }
 })
@@ -1139,7 +1139,7 @@ describe('viewing a specific note', () => {
       .expect(404)
   })
 
-  test('fails with statuscode 400 id is invalid', async () => {
+  test('fails with statuscode 400 if id is invalid', async () => {
     const invalidId = '5a3d5da59070081a82a3445'
 
     await api

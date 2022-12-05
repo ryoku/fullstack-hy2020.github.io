@@ -613,7 +613,7 @@ You will suffer from JavaScript fatigue yourself during this course. Fortunately
 <div class="tasks"> 
   <h3>Exercises 0.1.-0.6.</h3>
 
-The exercises are submitted via GitHub, and by marking the exercises as done in the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
+The exercises are submitted via GitHub, and by marking the exercises as done in the "my submissions" tab of the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
 
 You can submit all of the exercises into the same repository, or use multiple different repositories. If you submit exercises from different parts into the same repository, name your directories well. If you use a private repository to submit the exercises, add _mluukkai_ as a collaborator to it.
 
@@ -653,7 +653,7 @@ Learn about the basics of HTML forms by reading Mozilla's tutorial [Your first f
 
 <i>This exercise is not submitted to GitHub, it's enough to just read the tutorial</i>
 
-  <h4>0.4: New note</h4>
+  <h4>0.4: New note diagram</h4>
 
 In chapter [Loading a page containing JavaScript - review](/en/part0/fundamentals_of_web_apps#loading-a-page-containing-java-script-review) the chain of events caused by opening the page <https://studies.cs.helsinki.fi/exampleapp/notes> is depicted as a [sequence diagram](https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/)
 
@@ -690,11 +690,13 @@ The diagram does not have to be a sequence diagram. Any sensible way of presenti
 All necessary information for doing this, and the next two exercises, can be found from the text of [this part](/en/part0/fundamentals_of_web_apps#forms-and-http-post).
 The idea of these exercises is to read the text through once more, and to think through what is going on there. Reading the application [code](https://github.com/mluukkai/example_app) is not necessary, but it is of course possible. 
 
-  <h4>0.5: Single page app</h4>
+**Note** perhaps the best way to do diagrams is the [Mermaid](https://github.com/mermaid-js/mermaid#sequence-diagram-docs---live-editor) syntax that is now implemented in [GitHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) markdown pages! 
+
+  <h4>0.5: Single page app diagram</h4>
 
 Create a diagram depicting the situation where the user goes to the [single page app](/en/part0/fundamentals_of_web_apps#single-page-app) version of the notes app at <https://studies.cs.helsinki.fi/exampleapp/spa>.
 
-  <h4>0.6: New note</h4>
+  <h4>0.6: New note in Single page app diagram</h4>
 
 Create a diagram depicting the situation where the user creates a new note using the single page version of the app. 
 

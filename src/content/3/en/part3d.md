@@ -120,11 +120,11 @@ app.put('/api/notes/:id', (request, response, next) => {
 
 ### Deploying the database backend to production
 
-The application should work almost as-is in Fly.io/Heroku. We do have to generate a new production build of the frontend due to the changes that we have made to our frontend. 
+The application should work almost as-is in Fly.io/Heroku. We do have to generate a new production build of the frontend since changes thus far were only on our backend.
 
 The environment variables defined in dotenv will only be used when the backend is not in <i>production mode</i>, i.e. Fly.io or Heroku.
 
-For the production usage we have to set the database URL in the service that is hosing our app.
+For the production usage we have to set the database URL in the service that is hosting our app.
 
 In Fly.io that is done _fly secrets set_:
 

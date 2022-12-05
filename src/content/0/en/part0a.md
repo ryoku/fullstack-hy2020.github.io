@@ -35,15 +35,13 @@ Proceeding from part <i>n</i> to part <i>n+1</i> is not sensible before enough k
 
 In parts 1-4 you are expected to do <i>at least</i> all of the exercises that are not marked with an asterisk(*). Exercises marked with an asterisk count towards your final grade, but skipping them does not prevent you from doing the compulsory exercises in the next parts. Parts 5- do not have asterisk marked exercises since there is no similar dependency on previous parts.
 
-The speed of completing the course is flexible, and exercises can be submitted until 23:59 [EET](https://en.wikipedia.org/wiki/Eastern_European_Time) on 1 March 2023. 
-
-However, note that the deadline for taking exam for University of Helsinki credits is 10.1.2023. 
+The speed of completing the course is flexible.
 
 Exercise completion time statistics can be found via the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
 
 ### Course channel in Discord and Telegram
 
-You can discuss the course and related topics in our dedicated group on Discord <a target='_blank' href='https://study.cs.helsinki.fi/discord/join/fullstack'>https://study.cs.helsinki.fi/discord/join/fullstack</a> and on Telegram: <a target='_blank' href='https://t.me/fullstackcourse'>https://t.me/fullstackcourse</a>. Please join the conversation!
+You can discuss the course and related topics in our dedicated group on Discord <a target='_blank' href='https://study.cs.helsinki.fi/discord/join/fullstack'>https://study.cs.helsinki.fi/discord/join/fullstack</a> and on Telegram: <a target='_blank' href='https://t.me/fullstackcourse'>https://t.me/fullstackcourse</a>. Discord has fullstack_general and part-specific (channel names with fullstack prefix) channels for course-related discussion. Note that Discord's <i>chat channel is not suitable for the course-related discussion</i>. Please join the conversation!
 
 ### Parts and completion
 
@@ -69,8 +67,6 @@ Credits and grades are calculated as follows:
 Once you have completed enough exercises for a passing grade, you can download the course certificate from the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
 
 If you wish to receive university credits, you must complete the course exam. The exam does not count towards your final grade, but you must pass it. More info about the exam [here](/en/part0/general_info#the-course-exam).
-
-The last possible date for taking the exam is 10 January 2023. **Note that you must sign up for the exam by 9 January 2023, at the latest.**
 
 You can only take the exam after submitting enough exercises for five credits. It is not wise in practice to take the exam immediately after submitting the critical number of exercises. The exam is the same for 5-14 credits and does not count towards your grade.
 
@@ -154,7 +150,7 @@ How to study the course – instructions in a nutshell: other course parts
 
 ### Submitting exercises
 
-The exercises are submitted through GitHub and marking them as done on the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
+The exercises are submitted through GitHub and marking them as done on the "my submissions" tab of the [submission application](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
 
 If you are submitting exercises from different parts to the same repository, use an appropriate system for naming your directories. You can of course create a new repository for each part. If you are using a private repository, add <i>mluukkai</i> as a collaborator.
 
@@ -166,10 +162,12 @@ Many of the exercises build a larger application bit by bit. In these cases, sub
 
 ### The course exam
 
-For the official university credits you need to pass the course exam that covers parts 1-5 of the course.
+For the official university credits you need to pass the course exam that covers parts 1-5 of the course
+- If you fail the exam, it can be done again after one week
+- You may continue with submissions after the exam
 
 The exam is done in the exercise submission system. Follow the instructions below to complete the exam.
-- Enroll in the course through Open University by 9 Jan 2023.
+- Enroll in the course through Open University.
 - You will get the enrollment link through  [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen/submissions) once you have completed enough exercises.
 
 ![](../../images/0/enroll1.png)
@@ -269,7 +267,9 @@ Student Services email address: avoin-student@helsinki.fi
 
 ### Course certificate
 
-Even if you do not register to Open University for the exam, you can still download the course certificate from the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen) once you have completed enough exercises for a passing grade.
+Even if you do not register to Open University for the exam and the credits, you can still download the course certificate from the "My submissions" tab in the [submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen) once you have completed enough exercises for a passing grade.
+
+There is one certificate for the base parts (0-7) of the course and after that a separate cert for the each course part.
 
 ### Request a transcript of studies
 
@@ -282,6 +282,10 @@ You can request a verified transcript of studies <i>after your university credit
   - the language of the transcript.
 
 The transcript will be delivered to you electronically through email. Present this document at your institution to have the credits included in your degree. The decision to include the credits will be made by your home institution.
+
+### Continuing the course at year 2023
+
+The 2022 version of the course ends 1st March 2023. After that course has a two week maintainance break. During the break material stays online, and also exercises can be submitted. During the break the course content may change a bit, nothing too dramatic has been planned at the moment. All the exercises submitted for the 2022 version can be used in the 2023 edition so basically the course can be continued without bothering too much about the different versions
 
 ### Expanding on a previously completed course
 
@@ -335,6 +339,6 @@ If you find a typo in the material, or something has been expressed unclearly, o
 
 At the bottom of each part of the material is a link to <em>propose changes to material</em>. You can edit the source code of the page by clicking on the link.
 
-There are also lots of links in the material for many kind of background material. If you notice that a link is broken (that happens too often...), propose a change or ping us in Discord if you do not find a replacement for the broken link.
+There are also lots of links in the material for many kinds of background material. If you notice that a link is broken (that happens too often...), propose a change or ping us in Discord if you do not find a replacement for the broken link.
 
 </div>

@@ -545,7 +545,7 @@ Let's specify the following configurations in our <i>tsconfig.json</i> file:
 
 Do not worry too much about the <i>compilerOptions</i>; they will be under closer inspection later on.
 
-You can find explanations for each of the configurations from the TypeScript documentation, or from the really handy [tsconfig page](https://www.staging-typescript.org/tsconfig), or from the tsconfig [schema definition](http://json.schemastore.org/tsconfig), which unfortunately is formatted a little worse than the first two options. 
+You can find explanations for each of the configurations from the TypeScript documentation, or from the really handy [tsconfig page](https://www.typescriptlang.org/tsconfig), or from the tsconfig [schema definition](http://json.schemastore.org/tsconfig), which unfortunately is formatted a little worse than the first two options. 
 
 ### Adding Express to the mix
 
@@ -788,7 +788,7 @@ We can also explicitly type things <i>any</i>. The only difference between impli
 Programmers however see the code differently when <i>any</i> is explicitly enforced than when it is implicitly inferred. 
 Implicit <i>any</i> typings are usually considered problematic, since it is quite often due to the coder forgetting to assign types (or being too lazy to do it), and it also means that the full power of TypeScript is not properly exploited. 
 
-This is why the configuration rule [noImplicitAny](https://www.typescriptlang.org/v2/en/tsconfig#noImplicitAny) exists on compiler level, and it is highly recommended to keep it on at all times. 
+This is why the configuration rule [noImplicitAny](https://www.typescriptlang.org/tsconfig#noImplicitAny) exists on compiler level, and it is highly recommended to keep it on at all times. 
 In the rare occasions when you truly cannot know what the type of a variable is, you should explicitly state that in the code:
 
 ```js

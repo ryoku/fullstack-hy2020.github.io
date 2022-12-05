@@ -372,7 +372,7 @@ You can use _-f_ flag to specify a <i>file</i> to run the Docker Compose command
 
 Now start the MongoDB with _docker-compose -f docker-compose.dev.yml up -d_. With _-d_ it will run it in the background. You can view the output logs with _docker-compose -f docker-compose.dev.yml logs -f_. There the _-f_ will ensure we <i>follow</i> the logs.
 
-As said previously, currently we <strong>do not</strong> want to run the Node application inside a container. Developing while the application itself is inside a container is a challenge. We will explore that option in the later in this part.
+As said previously, currently we <strong>do not</strong> want to run the Node application inside a container. Developing while the application itself is inside a container is a challenge. We will explore that option later in this part.
 
 Run the good old _npm install_ first on your machine to set up the Node application. Then start the application with the relevant environment variable. You can modify the code to set them as the defaults or use the .env file. There is no hurt in putting these keys to GitHub since they are only used in your local development environment. I'll just throw them in with the _npm run dev_ to help you copy-paste.
 
@@ -444,7 +444,7 @@ The result of the bind mount is that the file <i>mongo-init.js</i> in the mongo 
 
 Run _docker-compose -f docker-compose.dev.yml down --volumes_ to ensure that nothing is left and start from a clean slate with _docker-compose -f docker-compose.dev.yml up_ to initialize the database.
 
-If all goes well, you will among the logs the following:
+If all goes well, you will find among the logs the following:
 
 ```bash
 "x86_64","version":"20.04"}}}}
@@ -551,7 +551,7 @@ $ docker volume inspect todo-backend_mongo_data
 ]
 ```
 
-The named volume still stored in your local filesystem but figuring out <i>where</i> may not be as trivial as with the previous option.
+The named volume is still stored in your local filesystem but figuring out <i>where</i> may not be as trivial as with the previous option.
 
 </div>
 
@@ -561,7 +561,7 @@ The named volume still stored in your local filesystem but figuring out <i>where
 
 #### Exercise 12.7: Little bit of MongoDB coding
 
-Note that this exercise assumes that you have done all the configurations made in material after the exercise 12.5. You should still run the todo-app backend <i>outside a container</i> just the MongoDB is containerized for now.
+Note that this exercise assumes that you have done all the configurations made in the material after exercise 12.5. You should still run the todo-app backend <i>outside a container</i>; just the MongoDB is containerized for now.
 
 The todo application has no proper implementation of routes for getting one todo (GET <i>/todos/:id</i>) and updating one todo (PUT <i>/todos/:id</i>). Fix the code.
 
@@ -575,7 +575,7 @@ The todo application has no proper implementation of routes for getting one todo
 
 > \- Matti Luukkainen
 
-When developing with containers, we need to learn new tools for debugging since we can not just "console.log" everything. When code has a bug, you may often be in a state where at least something works so you can work forward from that. Configuration most often is in either of the two states: 1. working or 2. broken. We will go over a few tools that can help when your application is in the latter state.
+When developing with containers, we need to learn new tools for debugging, since we can not just "console.log" everything. When code has a bug, you may often be in a state where at least something works, so you can work forward from that. Configuration most often is in either of two states: 1. working or 2. broken. We will go over a few tools that can help when your application is in the latter state.
 
 When developing software, you can safely progress step by step, all the time verifying that what you have coded behaves as expected. Often, this is not the case when doing configurations. The configuration you may be writing can be broken until the moment it is finished. So when you write a long docker-compose.yml or Dockerfile and it does not work, you need to take a moment and think about the various ways you could confirm something is working.
 
@@ -617,7 +617,7 @@ $ docker container rm keen_darwin
 $ docker container run -d -p 8080:80 nginx
 ```
 
-Let's look at the app by going to http://localhost:8080. It seems the app is showing the wrong message! Let's hop right into the container and fix the it. Keep your browser open, we won't need to shut down the container for this fix. We will execute bash inside the container, the flags _-it_ will ensure that we can interact with the container:
+Let's look at the app by going to http://localhost:8080. It seems that the app is showing the wrong message! Let's hop right into the container and fix this. Keep your browser open, we won't need to shut down the container for this fix. We will execute bash inside the container, the flags _-it_ will ensure that we can interact with the container:
 
 ```bash
 $ docker container ls

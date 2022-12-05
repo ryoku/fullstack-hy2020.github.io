@@ -25,19 +25,19 @@ Materiaali perustuu muutamien osasta osaan vaihtuvien esimerkkiohjelmien asteitt
 
 ### Suoritustapa
 
-Kurssi koostuu kahdestatoista osasta, joista ensimmäinen on historiallisista syistä numero nolla. Osat voi tulkita löyhästi ajatellen viikoiksi. Osia kuitenkin ilmestyy nopeampaa tahtia, ja suoritusnopeuskin on melko vapaa.
+Kurssi koostuu neljästätoista osasta, joista ensimmäinen on historiallisista syistä numero nolla. Osat voi tulkita löyhästi ajatellen viikoiksi. Osia kuitenkin ilmestyy nopeampaa tahtia, ja suoritusnopeuskin on melko vapaa.
 
 Materiaalissa osasta <i>n</i> osaan <i>n+1</i> eteneminen ei ole mielekästä ennen kuin riittävä osaaminen osan <i>n</i> asioista on saavutettu. Kurssilla sovelletaankin pedagogisin termein <i>tavoiteoppimista</i>, [engl. mastery learning](https://en.wikipedia.org/wiki/Mastery_learning) ja on tarkoitus, että etenet seuraavaan osaan vasta, kun riittävä määrä edellisen osan tehtävistä on tehty.
 
 Oletuksena on, että teet osien 1-4 tehtävistä <i>ainakin ne</i>, joita ei ole merkattu tähdellä. Myös tähdellä merkatut tehtävät vaikuttavat arvosteluun, mutta niiden tekemättä jättäminen ei aiheuta liian suuria esteitä seuraavan osan (tähdellä merkkaamattomien) tehtävien tekemiseen. Osissa 5- ei tähtiä ole, sillä osien tehtävillä ei ole suurta riippuvuutta aiempiin osiin. 
 
-Etenemisnopeus kurssilla on vapaa, tehtäviä voi palauttaa 1.3.2023. klo 23:59 asti. Jos haluat kurssista Avoimen yliopiston kautta opintopisteet, tulee kurssin koe suorittaa viimeistään 10.1.2023.
+Etenemisnopeus kurssilla on vapaa, tehtäviä voi palauttaa 1.3.2023. klo 23:59 asti. Tämän jälkeen kurssilla pidetään 2 viikon "päivitystauko", materiaali säilyy edelleen nähtävillä ja myös tehtäviä voi palauttaa tauon aikana. Kurssin sisältöön voi tulla tauon aikana pieniä muutoksia.
 
 Tämän kurssin eri osiin jo tehtyjen palautusten ajankäyttöstatistiikan näet [tehtävien palautussovelluksesta](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
 
 ### Apua tehtävien tekoon?
 
-Kurssilla ei tällä hetkellä ole varsinaista opetusta, mutta tehtäviin voi yrittää kysyä apua kurssin keskustelukanavalla Discordissa <a target='_blank' href='https://study.cs.helsinki.fi/discord/join/fullstack'>https://study.cs.helsinki.fi/discord/join/fullstack</a> sekä Telegramissa, kanavalla <a target='_blank' href='https://t.me/fullstackcourse'>https://t.me/fullstackcourse</a>.
+Kurssilla ei tällä hetkellä ole varsinaista opetusta, mutta tehtäviin voi yrittää kysyä apua kurssin keskustelukanavalla Discordissa <a target='_blank' href='https://study.cs.helsinki.fi/discord/join/fullstack'>https://study.cs.helsinki.fi/discord/join/fullstack</a> sekä Telegramissa, kanavalla <a target='_blank' href='https://t.me/fullstackcourse'>https://t.me/fullstackcourse</a>. Discordissa kurssiin liittyvää keskustelua varten on kanava fullstack_general ja osa-kohtaiset kanavat (muut fullstack-alkuiset kanavat). Huomaa, että Discordin <i>chat-kanava ei ole kurssiin liittyvää keskustelua varten</i>.
 
 Huom: kaikki epäasialliset, halventavat ja jotain ihmisryhmää syrjivät kommentit kanavalla ovat kiellettyjä ja tälläisten kommenttien esittäjät poistetaan kanavalta.
 
@@ -63,8 +63,6 @@ Arvosana/opintopisterajat:
 
 Jos haluat kurssista virallisen suoritusmerkinnän, kuuluu kurssiin myös koe. Hyväksytty suoritus edellyttää kokeen läpäisemistä, koe ei kuitenkaan vaikuta arvosanaan. Lisää tietoa kurssikokeesta [täällä](/osa0/yleista/#kurssikoe).
 
-Kokeen viimeinen suorituspäivä on 10.1.2023. **Huomaa, että viimeinen päivä kokeeseen ilmoittautumiselle on 9.1.2023.**
-
 Voit osallistua kokeeseen vasta siinä vaiheessa kun olet tehnyt riittävästi tehtäviä 5 opintopisteen suoritukseen. Käytännössä kokeeseen ei kuitenkaan kannata osallistua heti kun riittävä tehtäväpistemäärä on suoritettu. Koe on sisällöltään sama riippumatta siitä, onko suorituksesi laajuus 5-14 opintopistettä. Koe ei vaikuta kurssilta saamaasi arvosanaan. Kokeen läpipääsyyn riittää 75 % kokeen tarjolla olevista pisteistä.
 
 #### Osa 6 - Full Stack -websovelluskehitys, lisäosa 1 (1 op, CSM141082)
@@ -74,18 +72,21 @@ Suorittamalla vähintään 127 tehtävää kurssin osista 0-7 ydinkurssin suorit
 -	[Pyydä suoritusmerkintää](https://fullstackopen.com/osa0/yleista#suoritusmerkinnan-pyytaminen) tästä osasta. 
 
 #### Osa 7 - Full Stack -websovelluskehitys, lisäosa 2 (1 op, CSM141083)
+
 Suorittamalla vähintään 138 tehtävää kurssin osista 0-7 ydinkurssin suorittamisen yhteydessä, voit laajentaa suoritustasi yhdellä opintopisteellä. 
 -	Tee vähintään 138 tehtävää osista 0-7. 
 -	[Ilmoittaudu tähän osaan Avoimen yliopiston kautta.](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?s=otm-3016e9c9-0fdc-4ee3-9e9b-38176359f9f3)
 -	[Pyydä suoritusmerkintää](https://fullstackopen.com/osa0/yleista#suoritusmerkinnan-pyytaminen) tästä osasta. 
 
 #### Osa 8 - Full Stack -websovelluskehitys: GraphQL (1 op, CSM14113)
+
 Suorittamalla vähintään 22/26 tehtävää kurssin kahdeksannesta, GraphQL:ää käsittelevästä osasta, voit laajentaa suoritustasi yhdellä opintopisteellä. Voit tehdä GraphQL:ää käsittelevän osuuden periaatteessa jo osan 5 jälkeen sillä sen sisältö ei riipu osista 6 ja 7.
 -	Tee vähintään 22/26 tehtävää osasta 8. 
 -	[Ilmoittaudu tähän osaan Avoimen yliopiston kautta.](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?s=otm-067b1506-0307-4118-9e2b-292e0b81e491)
 -	[Pyydä suoritusmerkintää](https://fullstackopen.com/osa0/yleista#suoritusmerkinnan-pyytaminen) tästä osasta. 
 
 #### Osa 9 - Full Stack -websovelluskehitys: TypeScript (1 op, CSM14110, englanniksi)
+
 Suorittamalla vähintään 24/27 tehtävää kurssin yhdeksännestä, TypeScriptiä käsittelevästä osasta, voit laajentaa suoritustasi yhdellä opintopisteellä. Osa kannattaa suorittaa vasta sen jälkeen kun olet tehnyt osat 0-7.
 
 -	Tee vähintään 24/27 tehtävää osasta 9.
@@ -93,6 +94,7 @@ Suorittamalla vähintään 24/27 tehtävää kurssin yhdeksännestä, TypeScript
 -	[Pyydä suoritusmerkintää](https://fullstackopen.com/osa0/yleista#suoritusmerkinnan-pyytaminen) tästä osasta. 
 
 #### Osa 10 - Full Stack -websovelluskehitys: React Native (2 op, CSM14111, englanniksi)
+
 Suorittamalla 25 tehtävää kurssin kymmenennestä, React Nativea käsittelevästä osasta, voit laajentaa suoritustasi kahdella opintopisteellä. Lisätietoja osan esitietovaatimuksista, tehtävien palauttamisesta ja opintopisteistä löydät [osasta 10](/en/part10/introduction_to_react_native).
 
 -	Tee vähintään 25 tehtävää osasta 10. 
@@ -158,9 +160,8 @@ Virallinen kurssisuoritus edellyttää että teet hyväksyttävästi kurssin osi
 
 Koe tehdään tehtävien palautusjärjestelmässä. Pääset tekemään kokeen seuraavia ohjeita seuraamalla:
 
-- Tee Avoimen yliopiston kurssi-ilmoittautuminen 9.1.2023 mennessä.
+- Tee Avoimen yliopiston kurssi-ilmoittautuminen
 - Pääset ilmoittautumaan [palautussovelluksesta](https://studies.cs.helsinki.fi/stats/courses/fullstackopen/submissions) löytyvän linkin kautta sen jälkeen kun olet palauttanut riittävän määrän tehtäviä:
-
 
 ![](../../images/0/enroll1.png)
 
@@ -274,6 +275,9 @@ Ohjeet opintosuoritusotteen tilaamiseen:
 - Sähköisesti varmennettu opintosuoritusote toimitetaan sinulle sähköpostitse.
 - Toimittamalla virallisen opintosuoritusotteen omaan korkeakouluusi, saat opintopisteet rekisteröityä sinne. Huomaa että jokainen korkeakoulu päättää itse toisessa korkeakoulussa suoritettujen opintojen hyväksiluvusta tutkintoon.
 
+### Kurssin jatkaminen 2023
+
+Kurssin "vuoden 2022" versio päättyy 1.3.2023. klo 23:59 asti. Tämän jälkeen kurssilla pidetään 2 viikon "päivitystauko", materiaali säilyy edelleen nähtävillä ja myös tehtäviä voi palauttaa tauon aikana. Kurssin sisältöön voi tulla tauon aikana pieniä muutoksia. Kaikki vuoden 2022 versioon tehdyt palautukset ovat käytettävissä myös vuoden 2023 versiossa, joten voit jatkaa kurssia käytännössä eri vuosien versioista piittaamatta.
 
 ### Aiemmin suoritetun kurssin täydentäminen
 
@@ -303,7 +307,9 @@ Harjoitustyöstä on lisää tietoa [täällä](https://github.com/fullstack-hy2
 
 Kurssin yhteistyökumppaneista[Houston Inc](https://houston-inc.com/), [Terveystalo](https://www.terveystalo.com/en/) ja [Smartly.io](https://www.smartly.io/) ovat antaneet <i>haastattelulupauksen</i> kaikille kurssin sekä projektin täydessä laajuudessa (14+10 op) suorittaville.
 
-Haastattelulupaus tarkoittaa, että opiskelija voi niin halutessaan ilmoittautua työhaastatteluun haastattelulupauksen antaneelle yritykselle. Kurssin vastuuhenkilö toimittaa ohjeet opiskelijalle henkilökohtaisesti kurssisuorituksen jälkeen.
+Haastattelulupaus tarkoittaa, että opiskelija voi niin halutessaan ilmoittautua työhaastatteluun haastattelulupauksen antaneelle yritykselle. 
+
+Kun olet suorittanut haastattelulupaukseen oikeuttavan määrän kurssia, ota yhteyttä matti.luukkainen@helsinki.fi ja pyydä ohjeita haastattelulupaukseen osallistumiseen.
 
 ### Alkutoimet
 

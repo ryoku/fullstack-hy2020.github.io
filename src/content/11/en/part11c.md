@@ -74,7 +74,7 @@ flyctl auth token
 
 You'll need the token soon for your deployment workflow!
 
-Before setting up the deployment pipelinem let us ensure that a manual deployment with the command <i>flyctl deploy</i> works.
+Before setting up the deployment pipeline let us ensure that a manual deployment with the command <i>flyctl deploy</i> works.
 
 You most likely need to do at least two changes. Firstly, define the Node version to use in the file <i>package.json</i> to match one used in your machine. For me it is 16.13.2:
 
@@ -164,7 +164,7 @@ services.tcp_checks](https://fly.io/docs/reference/configuration/#services-tcp_c
     timeout = "2s"
 ```
 
-This section defines a basic healt check of the deployment. The tcp check ensures that the virtual machine where the app resides is up and running and reachable from outside, by opening a [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection to the virtual machine. 
+This section defines a basic health check of the deployment. The tcp check ensures that the virtual machine where the app resides is up and running and reachable from outside, by opening a [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection to the virtual machine. 
 
 This check notices if something is fundamentally broken in the configurations. E.g. in my case for the app of this part, it took several trials until I got the app up and running:
 

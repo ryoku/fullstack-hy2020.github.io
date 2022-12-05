@@ -66,7 +66,7 @@ npx json-server --port 3001 --watch db.json
  展望未来，我们的想法是将笔记保存到服务器上，在这种情况下，这意味着将它们保存到json-server。React代码从服务器上获取笔记，并将其渲染到屏幕上。每当一个新的笔记被添加到应用中，React代码也会将其发送到服务器，使新的笔记在 "内存 "中持续存在。
 
 <!-- json-server stores all the data in the <i>db.json</i> file, which resides on the server. In the real world, data would be stored in some kind of database. However, json-server is a handy tool that enables the use of server-side functionality in the development phase without the need to program any of it.-->
- json-server将所有数据存储在<i>db.json</i>文件中，该文件位于服务器上。在现实世界中，数据会被存储在某种数据库中。然而，jon-server是一个方便的工具，它能够在开发阶段使用服务器端的功能，而不需要对其进行任何编程。
+ json-server将所有数据存储在<i>db.json</i>文件中，该文件位于服务器上。在现实世界中，数据会被存储在某种数据库中。然而，json-server是一个方便的工具，它能够在开发阶段使用服务器端的功能，而不需要对其进行任何编程。
 
 <!-- We will get familiar with the principles of implementing server-side functionality in more detail in [part 3](/en/part3) of this course.-->
  我们将在本课程的[第三章节](/en/part3)中更详细地熟悉实现服务器端功能的原则。
@@ -124,7 +124,7 @@ notes.forEach(m => {
  在Java中，代码逐行执行，然后停下来等待HTTP请求，也就是等待命令_request.get(...)_完成。由命令返回的数据，在本例中是笔记，然后被存储在一个变量中，我们开始以所需的方式操作数据。
 
 <!-- On the other hand, JavaScript engines, or runtime environments, follow the [asynchronous model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop). In principle, this requires all [IO-operations](https://en.wikipedia.org/wiki/Input/output) (with some exceptions) to be executed as non-blocking. This means that code execution continues immediately after calling an IO function, without waiting for it to return.-->
- 另一方面，JavaScript引擎或运行时环境遵循[异步模型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop）。原则上，这要求所有的[IO-操作](https://en.wikipedia.org/wiki/Input/output)（除了一些例外)都以非阻塞方式执行。这意味着在调用一个IO函数后，代码的执行会立即继续，而不需要等待它的返回。
+ 另一方面，JavaScript引擎或运行时环境遵循[异步模型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)。原则上，这要求所有的[IO-操作](https://en.wikipedia.org/wiki/Input/output)（除了一些例外)都以非阻塞方式执行。这意味着在调用一个IO函数后，代码的执行会立即继续，而不需要等待它的返回。
 
 <!-- When an asynchronous operation is completed, or, more specifically, at some point after its completion, the JavaScript engine calls the event handlers registered to the operation.-->
  当一个异步操作完成时，或者更确切地说，在完成后的某个时间点，JavaScript引擎会调用注册在该操作上的事件处理程序。
@@ -342,7 +342,7 @@ console.log(promise2)
  **注意：**当文件<i>index.js</i>的内容发生变化时，React并不总是自动注意到这一点，所以你可能需要刷新浏览器来看到你的变化!一个简单的解决方法是在项目的根目录下创建一个名为<i>.env</i>的文件，并添加这一行<i>FAST_REFRESH=false</i>，使React自动注意到变化。重新启动应用以使应用的变化生效。
 
 <!-- Axios' method _get_ returns a [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).-->
- Axios'' 方法 _get_ 返回一个[承诺](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)。
+ 'Axios' 方法 _get_ 返回一个[承诺](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)。
 
 <!-- The documentation on Mozilla's site states the following about promises:-->
  Mozilla网站上的文档对承诺有如下说明。
@@ -361,7 +361,7 @@ console.log(promise2)
  3.承诺被<i>拒绝</i>：这意味着一个错误阻止了最终值的确定，这一般代表一个失败的操作。
 
 <!-- The first promise in our example is <i>fulfilled</i>, representing a successful _axios.get('http://localhost:3001/notes')_ request. The second one, however, is <i>rejected</i>, and the console tells us the reason. It looks like we were trying to make an HTTP GET request to a non-existent address.-->
- 我们例子中的第一个承诺是<i>fulfilled</i>，代表一个成功的_axios.get(''http://localhost:3001/notes')_请求。然而，第二个承诺是<i>拒绝的</i>，并且控制台告诉我们原因。看起来我们试图向一个不存在的地址发出HTTP GET请求。
+ 我们例子中的第一个承诺是<i>fulfilled</i>，代表一个成功的_axios.get('http://localhost:3001/notes')_请求。然而，第二个承诺是<i>拒绝的</i>，并且控制台告诉我们原因。看起来我们试图向一个不存在的地址发出HTTP GET请求。
 
 <!-- If, and when, we want to access the result of the operation represented by the promise, we must register an event handler to the promise. This is achieved using the method <em>then</em>:-->
  如果，以及何时，我们想访问承诺所代表的操作的结果，我们必须为承诺注册一个事件处理程序。这可以通过<em>then</em>方法实现。

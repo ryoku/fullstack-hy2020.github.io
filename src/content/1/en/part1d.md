@@ -7,50 +7,6 @@ lang: en
 
 <div class="content">
 
-### A note on React version
-
-Version 18 of React was released late March 2022. The code in this course should work with the new React version. However, some libraries might not yet be compatible with React 18. At the moment of writing (4th April) at least the Apollo client used in [part 8](/en/part8) does not yet work with most recent React.
-
-In case you end up in a situation where your application breaks because of library compatibility problems, <i>downgrade</i> to the older React by changing the file <i>package.json</i> as follows:
-
-```js
-{
-  "dependencies": {
-    "react": "^17.0.2", // highlight-line
-    "react-dom": "^17.0.2", // highlight-line
-    "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
-  },
-  // ...
-}
-```
-
-After the change is made, reinstall dependencies by running
-
-```js
-npm install
-```
-
-Note that also the file <i>index.js</i> needs to be changed a bit. For React 17 it looks like
-
-```js
-import ReactDOM from 'react-dom'
-import App from './App'
-
-ReactDOM.render(<App />, document.getElementById('root'))
-```
-
-but for React 18 the correct form is
-
-```js
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-
-import App from './App'
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
-```
-
 ### Complex state
 
 In our previous example the application state was simple as it was comprised of a single integer. What if our application requires a more complex state?
@@ -472,7 +428,7 @@ console.log('props value is', props)
 If you use the Java-like way of concatenating a string with an object, you will end up with a rather uninformative log message:
 
 ```js
-props value is [Object object]
+props value is [object Object]
 ```
 
 Whereas the items separated by a comma will all be available in the browser console for further inspection.
@@ -1058,9 +1014,10 @@ You may find the following links useful:
 
 <div class="tasks">
 
-<h3>Exercises  1.6.-1.14.</h3>
+<h3>Exercises 1.6.-1.14.</h3>
 
-Submit your solutions to the exercises by first pushing your code to GitHub and then marking the completed exercises into the [exercise submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
+Submit your solutions to the exercises by first pushing your code to GitHub and then marking the completed exercises into 
+the "my submissions" tab of the [submission application](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
 
 Remember, submit **all** the exercises of one part **in a single submission**. Once you have submitted your solutions for one part, **you cannot submit more exercises to that part any more**.
 
@@ -1278,6 +1235,7 @@ Now implement the final version of the application that displays the anecdote wi
 
 If multiple anecdotes are tied for first place it is sufficient to just show one of them.
 
-This was the last exercise for this part of the course and it's time to push your code to GitHub and mark all of your finished exercises to the [exercise submission system](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
+This was the last exercise for this part of the course and it's time to push your code to GitHub and mark all of your finished exercises to the "my submissions" tab of the [submission application](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
+
 
 </div>
